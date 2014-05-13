@@ -1,0 +1,9 @@
+.header {
+  position: relative;
+  margin: 0 auto;
+  width: 600px;
+  height: 124px;
+  text-align: center;
+  background-color: #F0F0F0; }
+  .header .logo {
+    margin-top: 35px; }

@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  clear: both; }
+
+.page-wrapper {
+  width: 100%;
+  height: 978px;
+  background-color: #F0F0F0; }
+  .page-wrapper .content-wrapper {
+    margin: 0 auto; }
+
+.content-wrapper {
+  position: relative;
+  background-color: #fff;
+  width: 600px;
+  height: 666px; }
+  .content-wrapper .phone-img {
+    position: absolute;
+    top: 155px;
+    right: 0;
+    width: 250px;
+    height: 507px;
+    z-index: 1;
+    background: url(http://cs614829.vk.me/v614829914/bd29/0imebysCNkE.jpg) no-repeat center center; }
+
+.stores .store-btn {
+  margin-right: 10px; }
