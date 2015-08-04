@@ -4,6 +4,15 @@
     this.y = y;
   }
 
+  Vector.prototype.add = function (vector) {
+    return new Vector(this.x + vector.x, this.y + vector.y);
+  };
+
+  Vector.prototype.unit = function () {
+    var divisor = Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+    return new Vector(this.x / divisor, this.y / divisor);
+  };
+
   window.Vector = Vector;
 
   function Size (width, height) {
@@ -16,11 +25,11 @@
   function Force (vector, strength) {
     this.unit = vector;
     this.strength = strength;
+  }
 
-    this.vector = function () {
-      var z = Math.sqrt(Math.pow(this.strength, 2) / (Math.pow(this.unit.x, 2) + Math.pow(this.unit.y, 2)));
-      return new Vector(this.unit.x * z, this.unit.y * z);
-    }
+  Force.prototype.vector = function () {
+    var z = Math.sqrt(Math.pow(this.strength, 2) / (Math.pow(this.unit.x, 2) + Math.pow(this.unit.y, 2)));
+    return new Vector(this.unit.x * z, this.unit.y * z);
   }
 
   window.Force = Force;
